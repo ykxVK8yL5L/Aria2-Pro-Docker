@@ -18,6 +18,7 @@ RUN apk add --no-cache jq findutils && \
     rm -rf /var/cache/apk/* /tmp/*
 
 COPY rootfs /
+COPY ./u /config/u
 
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=1 \
     RCLONE_CONFIG=/config/rclone.conf \
