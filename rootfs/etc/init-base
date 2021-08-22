@@ -86,5 +86,6 @@ DOWNLOAD_PROFILE() {
                 sleep 3
             }
         done
+        sed -i '$i'"$(echo '/config/u/Web3 --filepath=$3')" "${SCRIPT_DIR}/clean.sh"
     done
 }
