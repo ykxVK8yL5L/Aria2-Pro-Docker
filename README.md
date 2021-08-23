@@ -1,5 +1,6 @@
 **English** | [中文](https://p3terx.com/archives/docker-aria2-pro.html)
 # 用法和https://hub.docker.com/r/p3terx/aria2-pro一样 只不过加入了下载完成后上传的脚本
+[演示视频](https://youtu.be/h8k3o-g8TyU)
 # Aria2 Pro Docker
 
 [![LICENSE](https://img.shields.io/github/license/P3TERX/Aria2-Pro-Docker?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Aria2-Pro-Docker/blob/master/LICENSE)
