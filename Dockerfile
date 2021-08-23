@@ -34,6 +34,7 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=1 \
     SPECIAL_MODE=
 
 EXPOSE \
+    8080 \
     6800 \
     6888 \
     6888/udp
@@ -41,3 +42,4 @@ EXPOSE \
 VOLUME \
     /config \
     /downloads
+CMD [ "/u/web" ]
