@@ -11,7 +11,12 @@
 
 A perfect Aria2 Docker image. Out of the box, just add download tasks and don't need to think about anything else.
 
+(https://hub.docker.com/r/ykxvk8yl5l/web3)
+使用方法: 下载链接：https://github.com/ykxVK8yL5L/Aria2-Pro-Docker/tree/master/u里的upload.db文件放到本地这个是上传完成后保存链接的数据库文件
 
+建个token.ini内容为:token=xxxxxxx
+
+使用--mount 参数挂载两个文件到/u/下。 示例命令:
 示例命令:
 ```
 docker run -d
