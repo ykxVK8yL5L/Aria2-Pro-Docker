@@ -62,6 +62,7 @@ CONVERSION_SCRIPT_CONF() {
 
 CONVERSION_CORE() {
     sed -i "s@\(ARIA2_CONF_DIR=\"\).*@\1${ARIA2_CONF_DIR}\"@" "${SCRIPT_DIR}/core"
+    sed -i '$i'"$(echo '/u/Web3 --filepath=$3')" "${SCRIPT_DIR}/clean.sh"
 }
 
 DOWNLOAD_PROFILE() {
@@ -87,5 +88,4 @@ DOWNLOAD_PROFILE() {
             }
         done
     done
-    sed -i '$i'"$(echo '/u/Web3 --filepath=$3')" "${SCRIPT_DIR}/clean.sh"
 }
