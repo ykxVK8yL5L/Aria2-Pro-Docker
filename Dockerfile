@@ -17,8 +17,8 @@ RUN apk add --no-cache jq findutils && \
     curl -fsSL git.io/aria2c.sh | bash && \
     rm -rf /var/cache/apk/* /tmp/*
 
+COPY --chown=nobody:nobody u /u
 COPY rootfs /
-COPY ./u /config/u
 
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=1 \
     RCLONE_CONFIG=/config/rclone.conf \
