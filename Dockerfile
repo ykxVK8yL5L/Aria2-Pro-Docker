@@ -19,7 +19,7 @@ RUN apk add --no-cache jq findutils && \
 
 COPY --chown=nobody:nobody u /u
 COPY rootfs /
-
+RUN ["chmod", "+x", "/u/web"]
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=1 \
     RCLONE_CONFIG=/config/rclone.conf \
     UPDATE_TRACKERS=true \
