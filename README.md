@@ -1,5 +1,5 @@
 **English** | [中文](https://p3terx.com/archives/docker-aria2-pro.html)
-
+# 用法和https://hub.docker.com/r/p3terx/aria2-pro一样 只不过加入了下载完成后上传的脚本
 # Aria2 Pro Docker
 
 [![LICENSE](https://img.shields.io/github/license/P3TERX/Aria2-Pro-Docker?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Aria2-Pro-Docker/blob/master/LICENSE)
@@ -10,6 +10,29 @@
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/P3TERX/Aria2-Pro-Docker/Docker%20images%20build%20test?label=Actions&logo=github&style=flat-square)
 
 A perfect Aria2 Docker image. Out of the box, just add download tasks and don't need to think about anything else.
+
+
+示例命令:
+docker run -d
+--name web3
+--restart unless-stopped
+--log-opt max-size=1m
+-e PUID=$UID
+-e PGID=$GID
+-e UMASK_SET=022
+-e RPC_SECRET=123456
+-e RPC_PORT=6800
+-p 6800:6800
+-e LISTEN_PORT=6888
+-p 6888:6888
+-p 10086:8080
+-p 6888:6888/udp
+-v /docker_data/web3/config:/config
+-v /docker_data/web3/downloads:/downloads
+--mount type=bind,source=/docker_data/web3/config/token.ini,target=/u/token.ini
+--mount type=bind,source=/docker_data/web3/config/upload.db,target=/u/upload.db
+ykxvk8yl5l/web3
+
 
 ## Features
 
